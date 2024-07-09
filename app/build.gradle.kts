@@ -68,5 +68,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     // Modules
-    implementation(project(":Common Components"))
+    //implementation(project(":Common Components"))
+    implementation("com.farias:common-components:1.0")
 }

@@ -3,7 +3,6 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     `maven-publish`
 }
-
 android {
     namespace = "com.farias.commoncomponents"
     compileSdk = 34
@@ -56,20 +55,19 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+   implementation("com.github.dcendents:android-maven-gradle-plugin:2.1")
 }
 
 
 // Needed to publish on github packages
 afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("maven") {
-                groupId = "com.farias"
-                artifactId = "common-components"
-                version = "1.0"
-
-                from(components["release"])
-            }
+    android.libraryVariants.forEach { variant ->
+        publishing.publications.create<MavenPublication>(variant.name) {
+            from(components.findByName(variant.name))
+            groupId = "com.farias"
+            artifactId = "common-components"
+            version = "1.0"
+            //"com.farias.common-components:1.0"
         }
     }
 }
