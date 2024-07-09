@@ -1,7 +1,7 @@
 plugins {
-    alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    `maven-publish`
+    id("com.android.library")
+    id("maven-publish")
 }
 android {
     namespace = "com.farias.commoncomponents"
