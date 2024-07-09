@@ -42,11 +42,6 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
 
 }
 
@@ -68,7 +63,6 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation ("com.github.thiagoeffarias:MyDesignSystem:1.0")
     // Modules
-    //implementation(project(":Common Components"))
+    implementation(project(":Common Components"))
 }
