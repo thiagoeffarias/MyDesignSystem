@@ -14,8 +14,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import com.farias.commoncomponents.components.buttons.ButtonLoading
-import com.farias.commoncomponents.components.buttons.ButtonLoadingState
 import com.farias.mydesingsystem.ui.theme.MyDesingSystemTheme
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
