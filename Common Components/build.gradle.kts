@@ -1,7 +1,7 @@
 plugins {
-    alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    `maven-publish`
+    id ("com.android.library")
+    id ("maven-publish")
 }
 android {
     namespace = "com.farias.commoncomponents"
@@ -55,7 +55,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-   implementation("com.github.dcendents:android-maven-gradle-plugin:2.1")
+   //implementation("com.github.dcendents:android-maven-gradle-plugin:2.1")
 }
 
 

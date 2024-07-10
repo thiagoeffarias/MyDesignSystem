@@ -1,7 +1,2 @@
 jdk:
-  - openjdk17
-
-build:
-  targets:
-    - module: yourlibrary
-      configuration: release
+  - openjdk11
